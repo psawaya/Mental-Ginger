@@ -61,7 +61,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 # corresponding output. Helps a lot with print-debugging.
 TEST_RUNNER = 'djangotoolbox.test.CapturingTestSuiteRunner'
 
-MEDIA_DEV_MODE = DEBUG
+MEDIA_DEV_MODE = True
 DEV_MEDIA_URL = '/devmedia/'
 PRODUCTION_MEDIA_URL = '/media/'
 
