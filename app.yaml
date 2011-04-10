@@ -1,14 +1,26 @@
-application: mental-ginger
+application: socialactivator
 version: 1
 runtime: python
 api_version: 1
 
-handlers:
-- url: /js
-  static_dir: js
+builtins:
+- remote_api: on
 
-- url: /css
-  static_dir: css
-    
-- url: .*
-  script: main.py
+handlers:
+- url: /_ah/queue/deferred
+  script: djangoappengine/deferred/handler.py
+  login: admin
+
+- url: /_ah/stats/.*
+  script: djangoappengine/appstats/ui.py
+
+- url: /media/admin
+  static_dir: django/contrib/admin/media
+  expiration: '0'
+
+- url: /.*
+  script: djangoappengine/main/main.py
+
+- url: /media
+  static_dir: _generated_media/
+  expiration: '365d'
