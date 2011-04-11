@@ -1,41 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-{% load media %}
-<html xmlns="http://www.w3.org/1999/xhtml"
-<head>
-	  <title>mental ginger</title>
-    <script src='/_ah/channel/jsapi'></script> <!-- For GAE Channel API -->
-
-    {% include_media 'main.css' %} 
-    {% include_media 'main.js' %} 
-
-    <style>
-        #searchResults {
-            overflow:auto;
-            height:150px;
-        }
-
-        #searchResults img {
-            width:50px;
-        }
-
-        .imageBoard {
-            height:70%;
-            background-color:#000000;
-        }
-    </style>
-
-    <script>
-        $(document).ready(function () {
-           mentalGinger(); 
-        });
-    </script>
-</head>
-
-<body>
-    <div id="header"> 
-        <h1>Mental Ginger</h1>
-        <h3>refresh the taste palette of your mind</h3>
-    </div>
+{% extends "base.html" %} 
+{% block content %}
     <div>
         <div>
             Enter search term:
@@ -50,6 +15,4 @@
     <div id="imageBoard">
 
     </div>
-        
-</body>
-</html>
+{% endblock content %}
