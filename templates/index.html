@@ -1,18 +1,22 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 {% extends "base.html" %} 
 {% block content %}
-    <div>
-        <div>
-            Enter search term:
-            <input id="flickrSearch">  <input type="submit" value="search" id="flickrSearchButton">
-        </div>
-        
-        <div id="searchResults">
-            Image search results will appear here.
-        </div>
-    </div>
-    
-    <div id="imageBoard">
+<div id="topicName" >
+  <h2>Topic: {{ topicName }}</h2>
+</div>
 
-    </div>
+<div id="search">
+  <div>
+    Enter search term:
+    <input id="flickrSearch">  <input type="submit" value="search" id="flickrSearchButton">
+  </div>
+    
+  <div id="searchResults">
+    Image search results will appear here.
+  </div>
+</div>
+
+<div id="imageBoard">
+
+</div>
 {% endblock content %}

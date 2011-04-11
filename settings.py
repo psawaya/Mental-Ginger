@@ -37,7 +37,7 @@ INSTALLED_APPS = (
     'dbindexer',
     'mediagenerator',
     'imagesearch',
-
+    'topic',
     # djangoappengine should come last, so it can override a few manage.py commands
     'djangoappengine',
 )
