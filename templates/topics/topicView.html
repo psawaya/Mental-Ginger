@@ -4,6 +4,7 @@
   <h2>Topic: {{ topicName }}</h2>
 </div>
 
+{% if started %}
 <div id="search">
   <div>
     Enter search term:
@@ -18,4 +19,11 @@
 <div id="imageBoard">
 
 </div>
+{% else %}
+Topic has not been started!
+<form name="start-topic" value="." method="post">
+<input type="submit" value="Start Topic"/>
+</form>
+{% endif %}
+
 {% endblock content %}

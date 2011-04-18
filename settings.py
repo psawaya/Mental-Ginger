@@ -29,7 +29,7 @@ MEDIA_BUNDLES = (
 )
 
 INSTALLED_APPS = (
-#    'django.contrib.admin',
+    'django.contrib.admin',
     'django.contrib.contenttypes',
     'django.contrib.auth',
     'django.contrib.sessions',
@@ -37,7 +37,7 @@ INSTALLED_APPS = (
     'dbindexer',
     'mediagenerator',
     'imagesearch',
-    'topic',
+    'topics',
     # djangoappengine should come last, so it can override a few manage.py commands
     'djangoappengine',
 )
