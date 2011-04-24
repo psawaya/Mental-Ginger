@@ -10,8 +10,6 @@ urlpatterns = patterns('',
     (r'^$', 'django.views.generic.simple.direct_to_template',
         {'template': 'index.html'}),
     (r'^search', 'imagesearch.views.searchHandler'),
+    (r'^topic/start_topic/$', 'topics.views.start_topic'),
     (r'^topic/(?P<topicName>.+)/$', 'topics.views.topic_view'),
-    (r'^topic2/$', 'django.views.generic.simple.direct_to_template',
-        {'template': 'topics/topicview2.html'}),
-
 )
