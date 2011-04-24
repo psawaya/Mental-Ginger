@@ -23,12 +23,13 @@ function mentalGinger() {
         var newIMG = $(image).clone();
         newIMG.removeClass('previewImage');
         
-        $('#imageBoard').append(newIMG);
+        $('#image-board').append(newIMG);
     
         newIMG.draggable();
         
         newIMG.width(function (i,width) {
            return width > 150 ? 150 : width;
         });
+        window.console.log(newIMG);
     }
 }

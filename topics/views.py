@@ -2,8 +2,8 @@ from django.http import HttpResponse
 from django.template import Context, loader
 from topics.models import Topic
 
-def topicView(request, topicName):
-    t = loader.get_template('topics/topicView.html')
+def topic_view(request, topicName):
+    t = loader.get_template('topics/topicview.html')
     c = Context({'topicName' : topicName})
 
     # See if topic has been started

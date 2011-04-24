@@ -19,6 +19,7 @@ SECRET_KEY = '=r-$b*8hglm+858&9t043hlm6-&6-3d3vfc4((7yd0dbrakhvi'
 
 MEDIA_BUNDLES = (
     ('main.css',
+        'css/mentalginger.css',
         'css/ui-lightness/jquery-ui-1.8.8.custom.css',
     ),
     ('main.js',
