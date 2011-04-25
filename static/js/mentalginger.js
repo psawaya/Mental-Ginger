@@ -19,23 +19,39 @@ function mentalGinger() {
         }
     });
     
-    function addImageToCollage(image) {
-        var newIMG = $(image).clone();
-        newIMG.removeClass('previewImage');
-        
-        $('#image-board').append(newIMG);
     
-        newIMG.draggable({stop: function (event, ui) {
-            updateServer(event, ui)}
-        });
+    
+    function drawImageFromServer() {
         
-        newIMG.width(function (i,width) {
-           return width > 150 ? 150 : width;
-        });
-        window.console.log(newIMG);
-    };
+    }
 
-    function updateServer(event, ui) {
+
+    // Listen for drag events
+    //$('.ui-draggable').bind("dragstop", function(event, ui) {
+    //    alert('done drag');
+    //}); 
+}
+
+
+function addImageToCollage(image) {
+    var newIMG = $(image).clone();
+    newIMG.removeClass('previewImage');
+    
+    $('#image-board').append(newIMG);
+
+    newIMG.draggable({stop: function (event, ui) {
+        updateServer(event, ui)}
+    });
+        
+    newIMG.width(function (i,width) {
+       return width > 150 ? 150 : width;
+    });
+    window.console.log(newIMG);
+    return newIMG;
+};
+
+
+function updateServer(event, ui) {
         window.console.log($('#topic-name').text());
         window.console.log(ui.position);
         window.console.log(event.target.src);
@@ -50,8 +66,9 @@ function mentalGinger() {
     };
 
 
-    // Listen for drag events
-    $('.ui-draggable').bind("dragstop", function(event, ui) {
-        alert('done drag');
-    }); 
-}
+function createImageFromModel(image_src) {
+    var img = new Image();
+    img.src = image_src;
+    img.width = 150;
+    var attachedImage = addImageToCollage(img);
+};

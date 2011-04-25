@@ -16,6 +16,8 @@ def topic_view(request, topicName):
     topic_query  = Topic.objects.filter(name=topicName)
     if len(topic_query) > 0:
         c['started'] = True
+        topic = topic_query[0]
+        c['images'] = topic.image_set.all()
     else:
         c['started'] = False
     return HttpResponse(t.render(c))
