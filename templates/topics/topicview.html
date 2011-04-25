@@ -47,7 +47,7 @@
         });
   };
   {% for image in images %}
-    createImageFromModel('{{image.url}}');
+    createImageFromModel('{{image.url}}', '{{image.left}}', '{{image.top}}');
   {% endfor %}
 
 </script>

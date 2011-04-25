@@ -18,18 +18,6 @@ function mentalGinger() {
             addImageToCollage(e.target);
         }
     });
-    
-    
-    
-    function drawImageFromServer() {
-        
-    }
-
-
-    // Listen for drag events
-    //$('.ui-draggable').bind("dragstop", function(event, ui) {
-    //    alert('done drag');
-    //}); 
 }
 
 
@@ -66,9 +54,12 @@ function updateServer(event, ui) {
     };
 
 
-function createImageFromModel(image_src) {
+function createImageFromModel(image_src, image_left, image_top) {
     var img = new Image();
     img.src = image_src;
     img.width = 150;
     var attachedImage = addImageToCollage(img);
+    window.console.log(image_left);
+    attachedImage.css('left', image_left + 'px');
+    attachedImage.css('top', image_top + 'px');
 };
