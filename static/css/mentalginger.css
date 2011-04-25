@@ -1,0 +1,42 @@
+#content-wrap {
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1000px;
+}
+
+#image-board {
+  border: black solid 1px;
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 700px;
+}
+
+#left-col {
+  border: solid 1px;
+  float: left;
+  height: 100%;
+  width: 180px;
+}
+
+#right-col {
+  border: solid 1px;
+  float: right;
+  height: 100%;
+  width: 800px;
+}
+
+#searchResults {
+  overflow:auto;
+  height:400px;
+}
+
+#searchResults img {
+  width:50px;
+}
+
+.imageBoard {
+  height:70%;
+  background-color:#000000;
+}

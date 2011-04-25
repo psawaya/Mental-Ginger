@@ -1,0 +1,58 @@
+{% extends "base.html" %} 
+
+{% block content %}
+
+<div id="content-wrap">
+
+  <div id="left-col">
+
+      {% if started %}
+        <h2>Topic: <span id="topic-name">{{topicName}}</span></h2>
+
+        <div id="search">
+          <div>
+            Enter search term:
+            <input id="flickrSearch">
+            <input type="submit" value="search" id="flickrSearchButton">
+          </div>
+          <div id="searchResults">
+            Image search results will appear here.
+          </div>
+        </div>
+
+      {% else %}
+        Topic has not been started!
+        <input type="submit" value="Start Topic" onClick="startTopic();"/>
+      {% endif %}
+
+  </div>
+
+  <div id="right-col">
+    <div id="image-board">
+    </div>
+  </div>
+
+</div>
+
+{% endblock content %}
+
+
+{% block js %}
+<script>
+  var startTopic = function() {
+    $.post('/topic/start_topic/',
+        {start_topic_name: "{{topicName}}"},
+        function(data) {
+          top.location.reload();
+        });
+  };
+  {% for image in images %}
+    createImageFromModel('{{image.url}}');
+  {% endfor %}
+
+</script>
+{% endblock js %}
+
+
+
+
