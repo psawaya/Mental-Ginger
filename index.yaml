@@ -16,6 +16,11 @@ indexes:
   - name: action_time
     direction: desc
 
+- kind: topics_image
+  properties:
+  - name: __key__
+    direction: desc
+
 - kind: topics_topic
   properties:
   - name: __key__

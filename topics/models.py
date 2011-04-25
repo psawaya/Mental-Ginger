@@ -13,13 +13,16 @@ class Image(models.Model):
     """
     A single image on a topic.
     """
+    # The url uniquely identifies the image.
     url = models.URLField();
+    
+    # Each image belongs to exactly one topic.
     topic = models.ForeignKey(Topic)
 
     # Upper-left corner of the image
-    x = models.IntegerField();
-    y = models.IntegerField();
+    left = models.IntegerField();
+    top = models.IntegerField();
 
     def __unicode__(self):
-        return str(self.topic) + ' | ' + str(url)
+        return str(self.topic) + ' | ' + str(self.url)
 

@@ -11,5 +11,6 @@ urlpatterns = patterns('',
         {'template': 'index.html'}),
     (r'^search', 'imagesearch.views.searchHandler'),
     (r'^topic/start_topic/$', 'topics.views.start_topic'),
+    (r'^topic/update_topic/$', 'topics.views.update_topic'),
     (r'^topic/(?P<topicName>.+)/$', 'topics.views.topic_view'),
 )
