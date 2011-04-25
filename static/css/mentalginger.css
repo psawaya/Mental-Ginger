@@ -1,3 +1,18 @@
+#header {
+  display: inline-block;
+}
+#header-title {
+  float: left;
+}
+
+#header-subtitle {
+  float: left;
+}
+
+#header-topic-search {
+  float: left;
+}
+
 #content-wrap {
   height: 500px;
   margin-left: auto;

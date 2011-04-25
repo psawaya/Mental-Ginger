@@ -27,13 +27,27 @@
 
   <body>
     <div id="header">
-      <h1>Mental Ginger</h1>
-      <h3>refresh the taste palette of your mind</h3>
+      <div id="header-title">
+        <h1>Mental Ginger</h1>
+      </div>
+      <div id="header-subtitle">
+        <h3>refresh the taste palette of your mind</h3>
+      </div>
+      <div id="header-topic-search">
+        <input type="text" id="topic-to-find"/>
+        <input type="submit" value="Find Topic" onClick="findTopic();"/>
+      </div>
     </div>
 
     <div id="content">
         {% block content %}{% endblock %}
     </div>
+
+<script>
+  var findTopic = function() {
+    window.location.replace('/topic/' + $("#topic-to-find").val() + '/');
+  };
+</script>
 
     {% block js %}
     {% endblock %}
