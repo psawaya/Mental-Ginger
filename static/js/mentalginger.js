@@ -18,6 +18,12 @@ function mentalGinger() {
             addImageToCollage(e.target);
         }
     });
+    
+    //Hit enter to search.
+    $('.searchBox').keydown(function(ev) {
+        if (ev.keyCode == 13)
+            $(this).parent().find('input[type=submit]').click();
+    });
 }
 
 
