@@ -20,7 +20,7 @@ function mentalGinger() {
     });
     
     //Hit enter to search.
-    $('.searchBox').keydown(function(ev) {
+    $('.searchBox').live('keydown',function(ev) {
         if (ev.keyCode == 13)
             $(this).parent().find('input[type=submit]').click();
     });
