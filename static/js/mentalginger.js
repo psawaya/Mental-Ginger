@@ -33,8 +33,11 @@ function addImageToCollage(image) {
     
     $('#image-board').append(newIMG);
 
-    newIMG.draggable({stop: function (event, ui) {
-        updateServer(event, ui)}
+    newIMG.draggable({
+        stop: function (event, ui) {
+            updateServer(event, ui)
+        },
+        containment: '#image-board'
     });
         
     newIMG.width(function (i,width) {
